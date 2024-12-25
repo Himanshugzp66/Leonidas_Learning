@@ -11,20 +11,21 @@ phases:
       python: 3.13
   pre_build:
     commands:
+      - echo "Current directory:"
+      - pwd
+      - echo "Listing all files:"
+      - ls -R
       - echo "Installing dependencies..."
-      - pip install -r my-project-n-01/requirements.txt
+      - pip install -r Leonidas_Learning/my-project-n-01/requirements.txt
   build:
     commands:
-      - echo "Running tests..."
-      - cd my-project-n-01/
       - echo "Building Docker image..."
-      - echo "$DOCKER_REGISTRY_PASSWORD" | docker login -u "$DOCKER_REGISTRY_USERNAME" --password-stdin "$DOCKER_REGISTRY_URL"
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" Leonidas_Learning/my-project-n-01
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
   post_build:
     commands:
-      - echo "Build completed successfully Pandey!"
+      - echo "Build completed successfully!"
 artifacts:
   files:
     - '**/*'
-  base-directory: ../my-project-n-01
+  base-directory: Leonidas_Learning/my-project-n-01
