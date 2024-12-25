@@ -1,5 +1,5 @@
 # Base image
-FROM python:3.8
+FROM python:3.13.1
 
 # Set the working directory inside the container
 WORKDIR /app
@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 # Install the project dependencies
-RUN pip install -r requirements.txt
+RUN pip install -r my-project-n-01/requirements.txt
 
 # Copy the application code into the container
 COPY . .
