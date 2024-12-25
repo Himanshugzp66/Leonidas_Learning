@@ -8,7 +8,7 @@ WORKDIR /app
 COPY requirements.txt .  # Ensure requirements.txt is in the same directory as the Dockerfile
 
 # Install the project dependencies
-RUN pip install -r requirements.txt  # Corrected the path here
+RUN pip install -r my-project-n-01/requirements.txt  # Corrected the path here
 
 # Copy the entire application code into the container
 COPY . .  # Copy the entire application
