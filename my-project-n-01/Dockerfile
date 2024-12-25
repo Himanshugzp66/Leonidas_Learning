@@ -4,20 +4,17 @@ FROM python:3.13
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the requirements file
-COPY requirements.txt .
+# Copy the requirements file to the working directory
+COPY requirements.txt .  # Ensure requirements.txt is in the same directory as the Dockerfile
 
 # Install the project dependencies
-RUN pip install -r my-project-n-01/requirements.txt
+RUN pip install -r requirements.txt  # Corrected the path here
 
-# Copy the application code into the container
-COPY . .
+# Copy the entire application code into the container
+COPY . .  # Copy the entire application
 
 # Expose the port the Flask application will be listening on
 EXPOSE 5000
-
-# Set environment variables, if necessary
-# ENV MY_ENV_VAR=value
 
 # Run the Flask application
 CMD ["python", "app.py"]
