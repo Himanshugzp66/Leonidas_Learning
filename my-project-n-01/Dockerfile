@@ -1,17 +1,17 @@
-# Base image
+# Use Python as the base image
 FROM python:3.13
 
 # Set the working directory inside the container
 WORKDIR /app
 
-# Copy the requirements file to the working directory
-COPY requirements.txt .  # Copies requirements.txt from the context to /app
+# Copy the requirements file to the container
+COPY requirements.txt .  # Ensure this file exists in the context
 
-# Install the project dependencies
+# Install dependencies
 RUN pip install -r requirements.txt
 
-# Copy the entire application code into the container
-COPY . .  # Copies all files in the current folder to /app
+# Copy the application code into the container
+COPY . .  # Copy all files from the context to /app in the container
 
 # Expose the port the Flask application will be listening on
 EXPOSE 5000
