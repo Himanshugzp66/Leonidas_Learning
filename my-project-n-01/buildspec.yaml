@@ -5,27 +5,30 @@ env:
     DOCKER_REGISTRY_USERNAME: /myapp/docker-credentials/username
     DOCKER_REGISTRY_PASSWORD: /myapp/docker-credentials/password
     DOCKER_REGISTRY_URL: /myapp/docker-registry/url
+
 phases:
   install:
     runtime-versions:
       python: 3.13
   pre_build:
     commands:
-      - echo "Current directory:"
+      - echo "Cloning repository and verifying directory structure..."
       - pwd
-      - echo "Listing all files:"
+      - echo "Current directory contents:"
       - ls -R
       - echo "Installing dependencies..."
-      - pip install -r Leonidas_Learning/my-project-n-01/requirements.txt
+      - cd my-project-n-01
+      - if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "Error: requirements.txt not found"; exit 1; fi
   build:
     commands:
       - echo "Building Docker image..."
-      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" Leonidas_Learning/my-project-n-01
+      - docker build -t "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest" .
       - docker push "$DOCKER_REGISTRY_URL/$DOCKER_REGISTRY_USERNAME/simple-python-flask-app:latest"
   post_build:
     commands:
       - echo "Build completed successfully!"
+
 artifacts:
   files:
     - '**/*'
-  base-directory: Leonidas_Learning/my-project-n-01
+  base-directory: my-project-n-01
