@@ -18,7 +18,13 @@ phases:
       - ls -R
       - echo "Installing dependencies..."
       - cd my-project-n-01
-      - if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "Error: requirements.txt not found"; exit 1; fi
+      - |
+        if [ -f requirements.txt ]; then 
+          pip install -r requirements.txt; 
+        else 
+          echo "Error: requirements.txt not found"; 
+          exit 1; 
+        fi
   build:
     commands:
       - echo "Building Docker image..."
