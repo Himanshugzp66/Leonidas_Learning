@@ -5,7 +5,7 @@ FROM python:3.13
 WORKDIR /app
 
 # Copy the requirements file to the container
-COPY requirements.txt .  # Ensure this file exists in the context
+COPY /my-project-n-01/requirements.txt .  # Ensure this file exists in the context
 
 # Install dependencies
 RUN pip install -r requirements.txt
