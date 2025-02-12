@@ -1,8 +1,117 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Welcome</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Web-Pandey</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: #333;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #333;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            display: inline-block;
+        }
+
+        .navbar a:hover {
+            background: #555;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 20px;
+            background: linear-gradient(to right, #4CAF50, #2E8B57);
+            color: white;
+        }
+
+        /* Sections */
+        .section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .section:nth-child(even) {
+            background: #f4f4f4;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: white;
+            position: relative;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .navbar a {
+                display: block;
+                padding: 15px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello from GitHub! and Automate-Nginx Successfully done!-Horra!!!..</h1>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Hero Section -->
+    <div id="home" class="hero">
+        <h1>Welcome to Modern Website</h1>
+        <p>Clean, Responsive, and Stylish</p>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="section">
+        <h2>About Us</h2>
+        <p>We create awesome websites that are fast, secure, and user-friendly.</p>
+    </div>
+
+    <!-- Services Section -->
+    <div id="services" class="section">
+        <h2>Our Services</h2>
+        <p>Web Development, UI/UX Design, SEO Optimization, and more.</p>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="section">
+        <h2>Contact Us</h2>
+        <p>Email: contact@website.com | Phone: +123-456-7890</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2025 Modern Website. All rights reserved.</p>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            console.log("Website Loaded Successfully!");
+        });
+    </script>
+
 </body>
 </html>
