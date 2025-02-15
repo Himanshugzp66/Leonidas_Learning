@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Cloud Website..02</title>
+    <title>AWS Services Flip Card</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #232F3E; /* AWS Dark Blue */
-            color: #FF9900; /* AWS Orange */
+            color: white;
             text-align: center;
         }
 
@@ -32,17 +32,56 @@
             color: #232F3E;
         }
 
-        .hero {
-            padding: 60px 20px;
-            background-image: url('https://d1.awsstatic.com/logos/aws-logo-lockups/powered-by-aws/PB_AWS_logo_RGB_REV.75157a1e1217d0983b3c708dde7d7db05a5af808.png');
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-            min-height: 300px;
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
         }
 
-        .container {
-            padding: 40px;
+        .flip-card {
+            background-color: transparent;
+            width: 300px;
+            height: 200px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .flip-card-front {
+            background: #FF9900;
+            color: black;
+        }
+
+        .flip-card-back {
+            background: white;
+            color: #232F3E;
+            transform: rotateY(180deg);
+            padding: 20px;
         }
 
         .footer {
@@ -53,6 +92,7 @@
             bottom: 0;
             color: black;
         }
+
     </style>
 </head>
 <body>
@@ -64,14 +104,17 @@
         <a href="#">Contact</a>
     </div>
 
-    <div class="hero">
-        <h1>Welcome to AWS Cloud</h1>
-        <p>Build and scale your applications with AWS</p>
-    </div>
-
     <div class="container">
-        <h2>Why Choose AWS?</h2>
-        <p>Secure, scalable, and cost-effective cloud computing solutions.</p>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    AWS EC2
+                </div>
+                <div class="flip-card-back">
+                    Elastic Compute Cloud (EC2) provides scalable virtual servers in the cloud.
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
