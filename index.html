@@ -1,25 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Web-Pandey</title>
+    <title>Red Themed Website</title>
     <style>
-        /* General Styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            color: #333;
+            background-color: #ff0000; /* Red Background */
+            color: white;
+            text-align: center;
         }
 
-        /* Navbar */
         .navbar {
-            background: #333;
+            background: #b30000;
             padding: 15px;
-            text-align: center;
         }
 
         .navbar a {
@@ -30,89 +27,39 @@
         }
 
         .navbar a:hover {
-            background: #555;
+            background: #ff4d4d;
         }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 80px 20px;
-            background: linear-gradient(to right, #4CAF50, #2E8B57);
-            color: white;
+        .container {
+            padding: 50px;
         }
 
-        /* Sections */
-        .section {
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .section:nth-child(even) {
-            background: #f4f4f4;
-        }
-
-        /* Footer */
         .footer {
-            text-align: center;
-            padding: 20px;
-            background: #333;
-            color: white;
-            position: relative;
-        }
-
-        /* Responsive */
-        @media (max-width: 600px) {
-            .navbar a {
-                display: block;
-                padding: 15px;
-            }
+            background: #800000;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#contact">Contact</a>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Contact</a>
     </div>
 
-    <!-- Hero Section -->
-    <div id="home" class="hero">
-        <h1>Welcome to Modern Website</h1>
-        <p>Clean, Responsive, and Stylish</p>
+    <div class="container">
+        <h1>Welcome to the Red Pandey Website</h1>
+        <p>This is a simple example of a red UI.</p>
     </div>
 
-    <!-- About Section -->
-    <div id="about" class="section">
-        <h2>About Us</h2>
-        <p>We create awesome websites that are fast, secure, and user-friendly.</p>
-    </div>
-
-    <!-- Services Section -->
-    <div id="services" class="section">
-        <h2>Our Services</h2>
-        <p>Web Development, UI/UX Design, SEO Optimization, and more.</p>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="section">
-        <h2>Contact Us</h2>
-        <p>Email: contact@website.com | Phone: +123-456-7890</p>
-    </div>
-
-    <!-- Footer -->
     <div class="footer">
-        <p>&copy; 2025 Modern Website. All rights reserved.</p>
+        <p>&copy; 2025 Red Theme. All rights reserved.</p>
     </div>
-
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Website Loaded Successfully!");
-        });
-    </script>
 
 </body>
 </html>
