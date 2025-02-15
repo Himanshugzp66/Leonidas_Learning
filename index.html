@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Themed Website</title>
+    <title>AWS Cloud Website</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ff0000; /* Red Background */
-            color: white;
+            background-color: #232F3E; /* AWS Dark Blue */
+            color: #FF9900; /* AWS Orange */
             text-align: center;
         }
 
         .navbar {
-            background: #b30000;
+            background: #FF9900;
             padding: 15px;
         }
 
@@ -24,22 +24,34 @@
             text-decoration: none;
             padding: 10px 20px;
             display: inline-block;
+            font-weight: bold;
         }
 
         .navbar a:hover {
-            background: #ff4d4d;
+            background: #ffcc80;
+            color: #232F3E;
+        }
+
+        .hero {
+            padding: 60px 20px;
+            background-image: url('https://d1.awsstatic.com/logos/aws-logo-lockups/powered-by-aws/PB_AWS_logo_RGB_REV.75157a1e1217d0983b3c708dde7d7db05a5af808.png');
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 300px;
         }
 
         .container {
-            padding: 50px;
+            padding: 40px;
         }
 
         .footer {
-            background: #800000;
+            background: #FF9900;
             padding: 10px;
             position: fixed;
             width: 100%;
             bottom: 0;
+            color: black;
         }
     </style>
 </head>
@@ -47,18 +59,23 @@
 
     <div class="navbar">
         <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
+        <a href="#">AWS Services</a>
+        <a href="#">Pricing</a>
         <a href="#">Contact</a>
     </div>
 
+    <div class="hero">
+        <h1>Welcome to AWS Cloud</h1>
+        <p>Build and scale your applications with AWS</p>
+    </div>
+
     <div class="container">
-        <h1>Welcome to the Red Pandey Website</h1>
-        <p>This is a simple example of a red UI.</p>
+        <h2>Why Choose AWS?</h2>
+        <p>Secure, scalable, and cost-effective cloud computing solutions.</p>
     </div>
 
     <div class="footer">
-        <p>&copy; 2025 Red Theme. All rights reserved.</p>
+        <p>&copy; 2025 AWS Cloud. Powered by Amazon Web Services.</p>
     </div>
 
 </body>
